@@ -1,7 +1,7 @@
 node {
 	
 	stage('Clone')
-	    checkout poll: false, scm: [$class: 'GitSCM', branches: [[name: 'apps']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: 'advanceSettings/']]]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'd4e8a91c-5692-4120-852d-110775ea41bb', url: 'git@github.com:JMCRACKER/jccsb.git']]]
+	    checkout poll: false, scm: [$class: 'GitSCM', branches: [[name: 'apps']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: 'advanceSettings/']]]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'd4e8a91c-5692-4120-852d-110775ea41bb', url: '']]]
 	    jdk = tool name: 'jdk7'
         env.JAVA_HOME = "${jdk}"
         echo "jdk installation path is: ${jdk}"
